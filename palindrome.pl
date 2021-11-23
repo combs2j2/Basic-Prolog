@@ -9,4 +9,4 @@ reversed([X|Xs], FullReversed) :- reversed(Xs, XsReversed), myAppend(XsReversed,
 
 isPalindrome([X]) :- !.
 isPalindrome([]) :- !.
-isPalindrome(List) :- reversed(List, List).
+isPalindrome(List) :- reversed(List, List), !.
