@@ -8,4 +8,4 @@ merge([X|Xs], [Y|Ys], [Y,X|Result]) :- Y < X, merge(Xs, Ys, Result).
 
 mergeSort([X], [X]).
 mergeSort([], []).
-mergeSort(List, Result) :- splitInHalf(List, FirstHalf, SecondHalf), mergeSort(FirstHalf, FirstSorted), mergeSort(SecondHalf, SecondSorted), merge(FirstSorted, SecondSorted, Result).
+mergeSort(List, Result) :- split(List, FirstHalf, SecondHalf), mergeSort(FirstHalf, FirstSorted), mergeSort(SecondHalf, SecondSorted), merge(FirstSorted, SecondSorted, Result).
